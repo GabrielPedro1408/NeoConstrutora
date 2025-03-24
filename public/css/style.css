@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --azul-escuro: #010326;
+    --amarelo-claro: #F2E63D;
+    --verde-musgo: #535823;
+    --amarelo-escuro: #e1c53a;
+    --cinza: #A6A6A6;
+    --degrade-btn: linear-gradient(#F2E63D, #c9b033);
+}  
+.bg-verde{
+    background-color: var(--verde-musgo);
+}
+ /* clsse reutlizavel */
+.container{
+    font-family: "Josefin Sans", serif;
+    max-width: 1550px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+section, footer{
+    padding:2.7rem ;
+}
+.btn-gradient{
+    padding: 10px 25px;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-image: var(--degrade-btn) ;
+    
+}
+/* classe do projeto */
+nav{
+    display: flex;
+    position: static;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+    
+}
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.ul{
+    display: flex;
+    align-items: center;
+
+}.ul li {
+    margin: 0px 32px;
+    font-size: 15px;
+}
+.ul li a{
+    color: white;
+}
+/* main */
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-bottom: 25px;
+ }
+.main-text{
+    width: 60%;
+    max-width: 800px;
+    color: white;
+}
+.main-text h1{
+    font-size: 6rem;
+}
+
+.main-text h2{
+    color: #F2D43D;
+    font-size: 3rem;
+}
+.main-text div{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+} 
+.main-text button{
+    padding: 20px 40px;
+    border-radius: 25px;
+}
+.main-text img{
+    padding: 20px 10px;
+}
+.slider{
+    max-height: 900px;
+    height: 100vh;
+    position: relative;
+    border-top: 3px solid;
+}
+.slider .slider-container .slider-box{
+    position: absolute;
+    inset: 0 ;
+    overflow: hidden;
+    opacity: 0;
+}
+.slider .slider-box img:not(.verificado){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .slider-box::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #0a0a0a, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slider .slider-box .main-text{
+    position: absolute;
+    margin-left: 21%;
+    top: 35%;
+    z-index: 1;
+}
+
+@keyframes animaTexto{
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
+}
+.slider .slider-box.ativo h2, 
+.slider .slider-box.ativo button, 
+.slider .slider-box.ativo .verificado{
+    transform: translateY(50px);
+    opacity: 0.01;
+    animation: animaTexto 1.5s ease-out .5s forwards;
+}
+.slider .slider-box.ativo h2{
+    animation-delay: .8s;
+}
+.slider .slider-box.ativo h1{
+    transform: translateY(-70px);
+    opacity: 0.01;
+    animation: animaTexto 1.5s ease-out .5s forwards;
+}
+.slider-container .slider-box.ativo{
+    opacity: 1;
+    z-index: 111111;
+}
+
+/* setas */
+.setas{
+    width: 100%;
+    height: 100%;
+    padding: 0 4%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.setas button{
+    width: 50px;
+    height: 50px;
+    background-color: #747474;
+    border: 0;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 1s;
+    z-index: 222222;
+}
+.setas button:hover{
+    background-color: white;
+}
+
+/* buttons nav */
+
+.btn-nav-box{
+    width: 100%;
+    position: absolute;
+    left: 0;    
+    bottom: 50px;
+    z-index: 777777;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.btn-nav-box .btn-nav{
+    width: 35px;
+    height: 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn-nav-box .btn-nav.ativo{
+    background-color: white;
+    opacity: 1;
+}
+.btn-nav-box .btn-nav:hover{
+    background-color: white;
+}
+
+/* menu icon */
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+/* resultados */
+.resultados{
+    background: var(--amarelo-escuro);
+}
+.resultados .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    
+}
+.resultados-text{
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    width: 50%;
+}
+.resultados-text h2{
+    color: #020433;
+    font-size: 1.8rem;
+    font-weight: 700;
+    width: 50%;
+}
+.resultados .resultados-numeros{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #020433;
+}
+.resultados .resultados-numeros p{
+    text-align: center;
+    padding-right: 28%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.resultados .resultados-numeros p span{
+    font-size: 30px;
+    font-weight: 800;
+    color: #020433;
+}
+/* section diferenciais */
+.diferenciais{
+    background-color: #010326;
+}
+.diferenciais .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.diferenciais .card{
+    width: 30%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.4s;
+}
+.diferenciais .card:hover{
+    box-shadow: 1px 8px 22px 1px #fafafa;
+}
+.diferenciais .card img{
+    width: 65px;
+}
+.diferenciais.card.titulo{
+    margin: 13px 0;
+    font-weight: 700;
+}
+/* section casa */
+.casa .container{
+    display: flex;
+    align-items: center;
+}
+.casa .casa-image{
+    width: 50%;
+}
+.casa .casa-image img{
+    width: 100%;
+    border-radius: 10px;
+}
+.casa .casa-text{
+    width: 50%;
+    padding-left: 80px;
+}
+.casa .casa-text h2{
+    font-size: 2.5em;
+    color: #03054a;
+}
+.casa .casa-text p{
+    margin: 20px 0;
+    color: rgb(141, 141, 141);
+    font-size: 1.3em;
+}
+.casa .casa-text p b{
+    color: #010326;
+    font-size: 25px;
+}
+
+/* lugares */
+.melhores-lugares{
+    background-color: var(--verde-musgo);
+}
+.melhores-lugares .amarelo{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--amarelo-escuro);
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+.melhores-lugares h2{
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 700;
+}
+.melhores-lugares .container .card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    height: 300px;
+}
+.melhores-lugares .card .card-item{
+    width: 30%;
+    text-align: center;
+    padding: 30 0;
+    border-radius: 25px;
+    box-shadow: 0 5px 60px 0px var(--azul-escuro);
+}
+.melhores-lugares .card p{
+    padding: 8px 0;
+}
+.melhores-lugares .card img{
+    width: 100px;
+    padding: 30px 0 0 0 ;
+    align-items: center;
+}
+#card-rio img{
+    width: 50px;
+}
+#card-miami img{
+    width: 65px;
+}
+.melhores-lugares .card .local-casa{
+    margin: 5px 0;
+    color: gray;
+}
+.main-image .card .nome-casa{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+.melhores-lugares .card .contato{
+    margin-bottom: 20px;
+    color: gray;
+}
+.melhores-lugares .card button{
+    padding: 10px 25px;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-image: var(--degrade-btn) ;
+}
+/* newsletter */
+.newsletter{
+    background-color: var(--amarelo-escuro);
+}
+.newsletter .box-newsletter{
+    text-align: center;
+    padding: 150px;
+    background-image: url('../img/background-newsletter.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+.newsletter .box-newsletter h2{
+    font-size: 2.5rem; 
+    font-weight: 700;
+}
+.newsletter .box-newsletter p{
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+.newsletter .box-newsletter input{
+    width: 45%;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: antiquewhite;
+}
+.newsletter .box-newsletter button{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--azul-escuro);
+    cursor: pointer;
+}
+footer{
+    background-color: var(--azul-escuro);
+}
+footer .container{
+    display: flex;
+    color: white;
+}
+footer  .container ul{
+    width: 25%;
+    cursor: pointer;
+}
+footer .container h3{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+footer .container .redes-sociais img{
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+footer .container .rede
+footer .container ul>p{
+    margin-bottom: 40px;
+}
+footer .container li{
+    margin: 10px o;
+}
+footer .container .redes-sociais a{
+    color: white;
+    cursor: pointer;
+}
+
+/* responsivo */
+@media(max-width: 960px){
+    .menu-icon{
+        display: block;
+        z-index: 33333333333333;
+    }
+    .ul{
+        position: fixed;
+        background: var(--azul-escuro);
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.4s;
+        flex-direction: column;
+        padding-right: 60%;
+        justify-content: center;
+        z-index: 3333333333333;
+        
+    }
+    .ul li{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .ul.ativo{
+        left: 60%;
+    }
+    main .container{
+        flex-direction: column;
+        max-height: 500px;
+        height: 100%;
+    }
+    main .container .main-image{
+        width: 100%;
+        height: 100%;
+        max-height: 400px;
+    }
+    main .slider-container{
+        height: 100%;
+        max-height: 1000px;
+    }
+    .slider .slider-box::after{
+        content: '';
+        width: 100%;
+        height: 50%;
+        background-image: linear-gradient(to top, #000000, transparent);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .slider .slider-box .main-text{
+        position: absolute;
+        left: 22%;
+        top: 1%;
+        z-index: 1;
+        
+    }
+    main .container .main-text div{
+        justify-content: center;
+    }
+    .resultados .container{
+        flex-direction: column;
+    }
+    .resultados-numeros{
+        margin-top: 35px;
+    }
+    .resultados-text{
+        width: 100% ;
+        text-align: center;
+        flex-direction: column;
+    }
+    .resultados-text h2{
+        width: 100% ;
+        text-align: center;
+        flex-direction: column;
+    }
+    .diferenciais .container{
+        flex-direction: column;
+    }
+    .diferenciais .card{
+        width: 100%;
+    }
+    .casa .container{
+       flex-direction: column-reverse;
+    }
+    .casa .casa-text, .casa .casa-image{
+        width: 100%;
+        text-align: center;
+    }
+    .melhores-lugares .container{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .melhores-lugares .card {
+        width: 530px;
+        height: 430px;
+    }
+    .melhores-lugares .card .card-item{
+        align-items: center;
+        justify-content: center;
+    }
+    .melhores-lugares .card p{
+        font-size:9px ;
+    }
+    .melhores-lugares .card h3{
+        color:white ;
+    }
+    .newsletter .box-newsletter h2{
+        font-size: 2rem;
+    }
+    .newsletter .box-newsletter input{
+        width: 85%;
+    }
+    .newsletter .box-newsletter {
+        padding: 60px;
+    }
+    .newsletter .box-newsletter button{
+        width: 50%;
+        margin-top: 15px;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container ul{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+@media (
+    max-width:650px) {
+    .resultados .resultados-numeros p{
+        text-align: center;
+        
+        font-size: 10px;
+        font-weight: 500;
+        color: white;
+
+    }
+    .resultados .resultados-numeros p span{
+        font-size: 20px;
+        font-weight: 650;
+        color: #020433;
+    }
+    main .container .main-text h1{
+        font-size: 3rem;
+    }
+    .casa .container{
+        flex-direction: column-reverse;
+     }
+     .casa .casa-text, .casa .casa-image{
+         width: 100%;
+         text-align: center;
+         padding: 0 0;
+     }
+     .newsletter .box-newsletter input{
+        width: 100%;
+    }
+    .newsletter .box-newsletter {
+        padding: 35px 50px;
+    }
+    .newsletter .box-newsletter h2{
+        font-size: 1.8rem;
+    }
+    .newsletter .box-newsletter p{
+        font-size: 1rem;
+    }
+    .newsletter .box-newsletter button{
+        width: 60%;
+        font-size: 8px;
+        margin-top: 15px;
+    }
+ 
+}
+@media (max-width:600px ){
+    .melhores-lugares {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .melhores-lugares .card {
+        width: 300px;
+        height: 100px;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .melhores-lugares .card p{
+        font-size:4px ;
+    }
+    .melhores-lugares .card h3{
+        font-size:12px ;
+        color: white;
+    }
+    .melhores-lugares .card .contato{
+        margin-bottom: 10px;
+        
+    }
+    .melhores-lugares .card button{
+        padding: 2px 10px ;
+        font-size: 5px;
+        margin-bottom: 5px;
+    }
+}
+.container .slider-container .slider-box    {
+    position: absolute;
+}
+.slider-box .main-text{
+    position: static;
+
+}
+
+/* Adições para o Slideshow */
+.slider-box {
+    display: none;
+}
+
+.slider-box.ativo {
+    display: block;
+}
