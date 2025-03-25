@@ -95,7 +95,7 @@ main .container{
     padding: 20px 10px;
 }
 .slider{
-    max-height: 900px;
+    max-height: 800px;
     height: 100vh;
     position: relative;
     border-top: 3px solid;
@@ -120,6 +120,20 @@ main .container{
     top: 0;
     left: 0;
 }
+.container .slider-container .slider-box    {
+    position: absolute;
+}
+.slider-box .main-text{
+    position: static;
+
+}
+.slider-box {
+    display: none;
+}
+
+.slider-box.ativo {
+    display: block;
+}
 .slider .slider-box .main-text{
     position: absolute;
     margin-left: 21%;
@@ -139,7 +153,7 @@ main .container{
 .slider .slider-box.ativo .verificado{
     transform: translateY(50px);
     opacity: 0.01;
-    animation: animaTexto 1.5s ease-out .5s forwards;
+    animation: animaTexto 1.2s ease-out .5s forwards;
 }
 .slider .slider-box.ativo h2{
     animation-delay: .8s;
@@ -147,7 +161,7 @@ main .container{
 .slider .slider-box.ativo h1{
     transform: translateY(-70px);
     opacity: 0.01;
-    animation: animaTexto 1.5s ease-out .5s forwards;
+    animation: animaTexto 1.2s ease-out .5s forwards;
 }
 .slider-container .slider-box.ativo{
     opacity: 1;
@@ -250,7 +264,7 @@ main .container{
 }
 .resultados .resultados-numeros p{
     text-align: center;
-    padding-right: 28%;
+    margin-right: 28%;
     font-size: 20px;
     font-weight: 600;
     color: white;
@@ -453,7 +467,86 @@ footer .container .redes-sociais a{
 }
 
 /* responsivo */
-@media(max-width: 960px){
+@media(max-width:1320px){
+    .slider{
+    max-height: 650px;
+    }
+    .slider .slider-box .main-text{
+        position: absolute;
+        left: 22%;
+        top: 1%;
+        z-index: 1;
+        transform: translate(-21%, 30%);
+    }
+    .main-text{
+        width: 40%;
+        max-width: 600px;
+        color: white;
+    }
+    .main-text h1{
+        font-size: 4.5rem;
+    }
+    
+    .main-text h2{
+        color: #F2D43D;
+        font-size: 2.3rem;
+    }
+    .main-text div{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    } 
+    .main-text button {
+        padding: 18px 40px;
+        border-radius: 25px;
+    }
+    .main-text img{
+        padding: 15px 8px;
+    }
+    .resultados-numeros{
+        width: 50%;
+    }
+}
+footer .container{
+    flex-direction: row;
+}
+footer .container ul{
+    width: 100%;
+    margin-bottom: 30px;
+}
+footer .direita{
+    margin-left: 60%;
+}
+
+@media(max-width:1190px){
+    .slider{
+        max-height: 630px;
+    }
+    .main-text h1{
+        font-size: 4.1rem;
+    }
+        .main-text button {
+            padding: 17px 40px;
+            border-radius: 25px;
+        }
+
+}
+@media(max-width:1080px){
+    .slider{
+        max-height: 580px;
+    }
+    .main-text h1{
+        font-size: 3.8rem;
+    }
+    .main-text button {
+        padding: 16px 40px;
+        border-radius: 25px;
+    }
+    
+
+}
+
+@media(max-width: 996px){
     .menu-icon{
         display: block;
         z-index: 33333333333333;
@@ -479,38 +572,41 @@ footer .container .redes-sociais a{
     .ul.ativo{
         left: 60%;
     }
-    main .container{
-        flex-direction: column;
-        max-height: 500px;
-        height: 100%;
-    }
-    main .container .main-image{
-        width: 100%;
-        height: 100%;
-        max-height: 400px;
-    }
-    main .slider-container{
-        height: 100%;
-        max-height: 1000px;
-    }
-    .slider .slider-box::after{
-        content: '';
-        width: 100%;
-        height: 50%;
-        background-image: linear-gradient(to top, #000000, transparent);
-        position: absolute;
-        top: 0;
-        left: 0;
+    .slider{
+        max-height: 520px;
     }
     .slider .slider-box .main-text{
         position: absolute;
         left: 22%;
         top: 1%;
         z-index: 1;
+        transform: translate(-20%, 45%);
         
     }
-    main .container .main-text div{
-        justify-content: center;
+    .main-text{
+        width: 50%;
+        max-width: 6000px;
+        color: white;
+    }
+    .main-text h1{
+        font-size: 3rem;
+    }
+    
+    .main-text h2{
+        color: #F2D43D;
+        font-size: 1.7rem;
+    }
+    .main-text div{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    } 
+    .main-text button {
+        padding: 15px 40px;
+        border-radius: 25px;
+    }
+    .main-text img{
+        padding: 15px 8px;
     }
     .resultados .container{
         flex-direction: column;
@@ -528,8 +624,12 @@ footer .container .redes-sociais a{
         text-align: center;
         flex-direction: column;
     }
-    .diferenciais .container{
+    .diferenciais .container {
         flex-direction: column;
+        
+    }
+    .card {
+        margin-bottom: 10px;
     }
     .diferenciais .card{
         width: 100%;
@@ -540,6 +640,16 @@ footer .container .redes-sociais a{
     .casa .casa-text, .casa .casa-image{
         width: 100%;
         text-align: center;
+        
+    }
+    .melhores-lugares{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .melhores-lugares button{
+        margin-bottom: 15px;
     }
     .melhores-lugares .container{
         text-align: center;
@@ -547,6 +657,8 @@ footer .container .redes-sociais a{
         justify-content: center;
     }
     .melhores-lugares .card {
+        align-items: center;
+        justify-content: center;
         width: 530px;
         height: 430px;
     }
@@ -574,15 +686,62 @@ footer .container .redes-sociais a{
         margin-top: 15px;
     }
     footer .container{
-        flex-direction: column;
+        flex-direction: row;
     }
     footer .container ul{
         width: 100%;
         margin-bottom: 30px;
     }
+    footer .direita{
+        margin-left: 45%;
+    }
 }
-@media (
-    max-width:650px) {
+@media (max-width: 890px) {
+    .slider{
+        max-height: 460px;
+    }
+}
+@media (max-width: 783px) {
+
+    .slider {
+    max-height: 420px;
+    }
+    .slider .slider-box .main-text{
+        position: absolute;
+        left: 22%;
+        top: 1%;
+        z-index: 1;
+        transform: translate(-30%, 20%);
+        
+    }
+    .main-text{
+        width: 40%;
+        max-width: 600px;
+        color: white;
+    }
+    .main-text h1{
+        font-size: 2.5rem;
+    }
+    
+    .main-text h2{
+        color: #F2D43D;
+        font-size: 1.25rem;
+    }
+    .main-text div{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    } 
+    .main-text button {
+        padding: 10px 40px;
+        border-radius: 25px;
+    }
+    .main-text img{
+        padding: 15px 8px;
+    }
+
+}
+@media (max-width:650px) {
     .resultados .resultados-numeros p{
         text-align: center;
         
@@ -596,8 +755,18 @@ footer .container .redes-sociais a{
         font-weight: 650;
         color: #020433;
     }
+    .slider{
+        max-height: 360px;
+    }
     main .container .main-text h1{
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+    .slider .slider-box .main-text{
+        position: absolute;
+        left: 22%;
+        top: 1%;
+        z-index: 1;
+        transform: translate(-30%, 35%);
     }
     .casa .container{
         flex-direction: column-reverse;
@@ -624,9 +793,22 @@ footer .container .redes-sociais a{
         font-size: 8px;
         margin-top: 15px;
     }
- 
+    footer .container{
+        flex-direction: row;
+    }
+    footer .container ul{
+        max-width: 400px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    footer .direita{
+        margin-left: 15%;
+    }
 }
 @media (max-width:600px ){
+    .slider{
+        max-height: 320px;
+    }
     .melhores-lugares {
         display: flex;
         text-align: center;
@@ -658,19 +840,27 @@ footer .container .redes-sociais a{
         margin-bottom: 5px;
     }
 }
-.container .slider-container .slider-box    {
-    position: absolute;
+footer .container{
+    flex-direction: row;
 }
-.slider-box .main-text{
-    position: static;
-
+footer .container ul{
+    width: 100%;
+    margin-bottom: 30px;
+}
+footer li, h3, p{
+    font-size: 0.8rem;
+}
+#footer img{
+    flex-direction: row;
+    width: 10px;
+    height: 10px;
+}
+footer .direita{
+    margin-left: 20%;
 }
 
-/* Adições para o Slideshow */
-.slider-box {
-    display: none;
-}
-
-.slider-box.ativo {
-    display: block;
+@media (max-width: 500px) {
+    .slider{
+        max-height: 250px;
+    }
 }
