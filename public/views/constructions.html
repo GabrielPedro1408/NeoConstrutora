@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/construction.css">
+    <script type="module" src="../js/PopUp.js"></script>
+    <title>Construções</title>
 </head>
 <body>
-    
+    <div class="bg-verde">
+        <!-- start cabeçalho -->
+        <header>
+            <!-- start container -->
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <a href="index.html">NeoConstrutora</a>
+                    </div>
+                    <ul class="ul">
+                        <li> <a href="index.html"> Home </a></li>
+                        <li> <a href="about.html"> Sobre </a></li>
+                        <li> <a id="openPopUp" href="#"> Contato</a></li>
+                        <li> <a href="constructions.html"> Construções </a></li>
+                        <li> <a href="#"> <button class="btn-gradient">Eu Quero!</button> </a> </li>
+                    </ul>
+                    <div class="menu-icon">
+                        <img src="../img/menu.png" alt="menu">
+                    </div>
+                </nav>
+            </div>
+            <!--end container-->
+        </header>
+    </div>
+        <!-- end cabeçalho -->
+
+        <!-- PopUp -->
+             <div class="modal" id="modal">
+                <div class="modal-inner">
+                    <h2>Informações para Contato</h2>
+                    <h5>Email</h5> <p>neoconstrutora@yahoo.com.br</p>
+                    <h5>Telefone</h5> <p>+55 (011) 98765-0129</p>
+                    <h5>Endereço</h5> <p>Av. 9 de Julho, 3160, Judiaí - SP</p>
+                    <button id="closePopUp">Fechar</button>
+                </div>
+            </div>
+        <!-- PopUp -->
 </body>
 </html>

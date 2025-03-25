@@ -1,0 +1,155 @@
+#carousel{
+    background-color: #010326;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.carousel{
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+    border-radius: 5px;
+    box-shadow: 20px 35px 35px (0, 0, 0, 0.5);
+}
+.image-carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    justify-items: stretch;
+    animation: animation 16s linear infinite;
+    gap: 10px 180px;
+}
+
+.image-carousel img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#mainAbout{
+    display: flex;
+    font-family: "Josefin Sans", serif;
+    max-width: 1650px;
+    padding: 0 5%;
+    margin: 0 auto;
+    max-height: 100vh;
+    height: 50vh;
+    }
+.mainText{
+    max-width: 40%;
+    margin-left: 5%;
+}
+.mainText h1{
+    font-size: 2.5rem;
+    color: #010326;
+    margin-top: 5vh;
+}
+.mainText p{
+    margin-top: 5vh;
+    font-size: 1.2rem;
+}
+.mainImage{
+    margin-top: 5vh;
+}
+
+.mainImage img{
+    display: flex;
+    width: 520px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.mainText{
+    max-width: 40%;
+    margin-left: 5%;
+}
+.mainText h1{
+    font-size: 2.5rem;
+    color: #010326;
+    margin-top: 5vh;
+}
+.mainText p{
+    margin-top: 5vh;
+    font-size: 1.2rem;
+}
+.mainImage{
+    margin-top: 5vh;
+}
+
+.mainImage img{
+    display: flex;
+    width: 520px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+/* divisão */
+#mainFiliais{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-family: "Josefin Sans", serif;
+    max-width: 1650px;
+    padding: 0 auto;
+    margin: 0 auto;
+    max-height: 100vh;
+    height: 50vh;
+    
+}
+.mainText-dois{
+    max-width: 40%;
+    margin-right: 15%;
+}
+.mainText-dois h1{
+    font-size: 2.5rem;
+    color: #010326;
+    max-width: 100%;
+}
+ .mainText-dois p{
+    margin-top: 5vh;
+    font-size: 1.2rem;
+}
+.mainImage-dois img{
+    display: flex;
+    width: 520px;
+    height: 350px;
+    border-radius: 15px; 
+}
+.lugares-filiais-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5vh;
+    
+}
+.lugares-filiais-img img{
+    width: 120px;
+    height: 105px;
+    margin: auto;
+}
+
+.lugares-filiais-img img:not(.rj){
+    
+}
+.imgs{
+    
+    width: 125px;
+    height: 120px;
+    border: 2px solid #010326;
+    border-radius: 60px;
+    
+}
+.imgs:not(:first-child){
+    margin-left: 20%;
+    
+}
+
+
+@keyframes animation{
+    to{
+        translate: calc(-5*240px);
+    }
+}

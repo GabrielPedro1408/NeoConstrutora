@@ -1,11 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sobre</title>
+    <link rel="shortcut icon" href="../img/casa1.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <script type="module" src="../js/PopUp.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    
+    <div class="bg-verde">
+        <!-- start cabeçalho -->
+        <header>
+            <!-- start container -->
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <a href="index.html">NeoConstrutora</a>
+                    </div>
+                    <ul class="ul">
+                        <li> <a href="index.html"> Home </a></li>
+                        <li> <a href="about.html"> Sobre </a></li>
+                        <li> <a id="openPopUp" href="#"> Contato</a></li>
+                        <li> <a href="constructions.html"> Construções </a></li>
+                        <li> <a href="#"> <button class="btn-gradient">Eu Quero!</button> </a> </li>
+                    </ul>
+                    <div class="menu-icon">
+                        <img src="../img/menu.png" alt="menu">
+                    </div>
+                </nav>
+            </div>
+            <!--end container-->
+        </header>
+    </div>
+        <!-- end cabeçalho -->
+
+        <!-- PopUp -->
+             <div class="modal" id="modal">
+                <div class="modal-inner">
+                    <h2>Informações para Contato</h2>
+                    <h5>Email</h5> <p>neoconstrutora@yahoo.com.br</p>
+                    <h5>Telefone</h5> <p>+55 (011) 98765-0129</p>
+                    <h5>Endereço</h5> <p>Av. 9 de Julho, 3160, Judiaí - SP</p>
+                    <button id="closePopUp">Fechar</button>
+                </div>
+            </div>
+        <!-- PopUp -->
+    </div>
+    <main> 
+        <section id="carousel">
+            <div class="carousel">
+                <div class="image-carousel">
+                    <img src="../img/casa1.jpg" alt="casa1">
+                    <img src="../img/casa2.jpeg" alt="casa2">
+                    <img src="../img/casa3.jpg" alt="casa3">
+                    <img src="../img/casa.jpeg" alt="casa4">
+                    <img src="../img/casa.png" alt="casa5">
+                    <img src="../img/casa4.jpg" alt="casa6">
+                    <img src="../img/casa5.jpeg" alt="casa7">
+                </div>
+            </div>
+        </section>
+        <section id="mainAbout">
+            <div class="mainImage">
+                <img src="../img/engenharia.jpeg" alt="engenheiros trabalhando">
+            </div>
+            <div class="mainText">
+                <h1 class="title">Quem somos?</h1>
+                <p>Somos uma empresa que atua no mercado de construção civil desde 2010, com o objetivo de realizar o sonho da casa própria. 
+                    Com uma equipe de profissionais qualificados, buscamos sempre a excelência em nossos serviços, prezando pela qualidade e satisfação de nossos clientes.
+                    A NeoConstrutora é uma empresa que se preocupa com o meio ambiente, por isso, utilizamos materiais sustentáveis em nossas construções.
+                    Nossos projetos são desenvolvidos por arquitetos renomados, que buscam sempre inovar e trazer o que há de melhor no mercado.
+                    Venha nos conhecer e realizar o sonho da casa própria! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto iste magnam eligendi accusamus
+                    error laborum reiciendis maiores quasi placeat, porro beatae! Beatae at, neque a fuga maxime laborum corporis.
+                </p>
+            </div>
+        </section>
+        <section id="mainFiliais">
+            <div class="mainImage-dois">
+                <img src="../img/filial.jpeg" alt="engenheiros trabalhando">
+            </div>
+            <div class="mainText-dois">
+                <h1 class="title-dois">Nossas Filiais</h1>
+                <span><p>Começamos com apenas uma unidades em São Paulo, vcê pode nos encontrar em diversos lugares dentro e fora do Brasil, como Rio de Janeiro, São Paulo, Jundiaí-Sp e Miami-Flórida.
+                    Nossas filiais estão localizadas em pontos estratégicos, para melhor atender nossos clientes. 
+                    Venha nos visitar e conhecer nossos projetos, estamos sempre prontos para atendê-lo.
+                </p></span>
+                <div class="lugares-filiais-img">
+                    <div class="imgs"><span><img class="rj" src="../img/riodejaneiro.png" alt="RJ"></span></div>
+                    <div class="imgs"><img src="../img/saopaulo.png" alt="SP"></div>
+                    <div class="imgs"><img src="../img/miami.png" alt="Miami"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="container"id="footer">
+            <!-- <ul> ul 1 -->
+                <div class="esquerda">
+                <ul>
+                <h3>NeoConstrutora</h3>
+                <p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit <br> modi nostrum </p>
+                 <div class="redes-sociais">
+                    <a href=""><img src="../img/instagram.png"  alt="instagram"></a>
+                    <a href=""><img src="../img/linkedin.png" alt="linkedin"></a>
+                    <a href=""><img src="../img/twitter.png" alt="linkedin"></a>
+                    <a href=""><img src="../img/facebook.png" alt="linkedin"></a>
+                 </div>
+            </ul>
+            <!-- end ul 1 -->
+            <!-- ul 2 -->
+            <ul>
+                <h3>Link</h3>
+                <li><a href="index.html"></a>Home</li>
+                <li><a href="#"></a>Cotações</li>
+                <li><a href="#"></a>Sobre</li>
+                <li><a href="#"></a>Serviços</li>
+            </ul>
+            
+        </div>
+            <!-- end ul 2 -->
+            <!-- ul 3 -->
+             <div class="direita">
+            <ul>
+                <h3>Suporte</h3>
+                <li><a href="#"></a>FAQ</li>
+                <li><a href="#"></a>Como Funciona</li>
+                <li><a href="#"></a>Características</li>
+                <li><a href="#"></a>Contato</li>
+            </ul>
+            <!-- end ul3 -->
+            <!-- ul 4 -->
+             <br>
+            <ul>
+                <h3>Nosso Contato</h3>
+                <li><a href="#"></a>+55 (011) 98787-0128</li>
+                <li><a href="#"></a>construtorasntsp@gmail.com</li>
+                <li><a href="#"></a>Brasil</li>                    
+            </ul>
+            <!-- end ul4 -->
+        </div>
+    </div>
+    </footer>
 </body>
 </html>

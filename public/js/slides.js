@@ -3,34 +3,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnNav = document.querySelectorAll('.btn-nav-box .btn-nav');
     let currentSlide = 0;
 
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('ativo'); // Adiciona a classe "ativo" ao slide atual
+            } else {
+                slide.classList.remove('ativo'); // Remove a classe "ativo" dos outros slides
+            }
+        });
+
+        btnNav.forEach((btn, i) => {
+            if (i === index) {
+                btn.classList.add('ativo'); // Atualiza o botão de navegação ativo
+            } else {
+                btn.classList.remove('ativo');
+            }
+        });
+    }
+
     document.getElementById('proxim').addEventListener('click', () => {
-        slides[currentSlide].classList.remove('ativo');
-        btnNav[currentSlide].classList.remove('ativo');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('ativo');
-        btnNav[currentSlide].classList.add('ativo');
+        currentSlide = (currentSlide + 1) % slides.length; // Vai para o próximo slide
+        showSlide(currentSlide);
     });
 
     document.getElementById('anterior').addEventListener('click', () => {
-        slides[currentSlide].classList.remove('ativo');
-        btnNav[currentSlide].classList.remove('ativo');
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        slides[currentSlide].classList.add('ativo');
-        btnNav[currentSlide].classList.add('ativo');
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Vai para o slide anterior
+        showSlide(currentSlide);
     });
+
     btnNav.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-            slides[currentSlide].classList.remove('ativo');
-            btnNav[currentSlide].classList.remove('ativo');
-            currentSlide = index;
-            slides[currentSlide].classList.add('ativo');
-            btnNav[currentSlide].classList.add('ativo');
+            currentSlide = index; // Atualiza o slide atual com base no botão clicado
+            showSlide(currentSlide);
         });
     });
 
-    slides[currentSlide].classList.add('ativo');
-    btnNav[currentSlide].classList.add('ativo');
-
+    // Mostra o primeiro slide ao carregar a página
+    showSlide(currentSlide);
 });
 
 
